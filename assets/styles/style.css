@@ -1,129 +1,197 @@
 * {
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 .body {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-    grid-template-rows: 10% 82% 8%;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 10% 82% 8%;
 }
 
 .header {
-    grid-area: header;
-    background-color: rgb(9, 90, 141);
-    display: flex;
-    color: white;
+  grid-area: header;
+  background-color: rgb(9, 90, 141);
+  display: flex;
+  color: white;
 }
 
 .logo {
-    width: 20%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nombre {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
 }
 
-.menu {
-    width: 20%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.menu_movil {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_text {
+  display: none;
 }
 
 .main {
-    grid-area: main;
+  grid-area: main;
 }
 
 .galeria {
-    width: 100%;
-    height: 90%;
-    display: flex;
-    flex-wrap: wrap;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .imagen {
-    width: 50%;
-    height: 50%;
-    display: flex;
-    background-size: cover;
-    text-size-adjust: 75%;
-    justify-content: center;
-    align-items: flex-end;
-    transition: scale(1.75) 0.3s ease-in-out;
-   }
+  width: 50%;
+  height: 50%;
+  display: flex;
+  background-size: cover;
+  text-size-adjust: 75%;
+  justify-content: center;
+  align-items: flex-end;
+  transition: all 0.7s ease-in;
+
+}
 
 .i1 {
-    background-image: url(../img/bahia_cata.jpg);
-   }
+  background-image: url(../img/bahia_cata.jpg);
+
+}
 
 .i2 {
-    background-image: url(../img/bahia_inglesa.JPG);
+  background-image: url(../img/bahia_inglesa.JPG);
 }
 
 .i3 {
-    background-image: url(../img/la_portada.JPG);
+  background-image: url(../img/la_portada.JPG);
 }
 
 .i4 {
-    background-image: url(../img/cascada.JPG);
+  background-image: url(../img/cascada.JPG);
 }
 
 .descripcion {
-    width: 100%;
-    height: 10%;
-    background-color: lightgray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 10%;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-/* .siguiente_imagen {
-    width: 100%;
-    height: 8%;
-    border: 1px solid pink;
-} */
 
 .footer {
-    grid-area: footer;
-    display: flex;
-    align-items: center;
+  grid-area: footer;
+  background-color: rgb(2, 54, 86);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
 }
 
-/* .piepag {
-    width: 100%;
-    height: 100%;
-    border: 1px solid red;
-} */
+.contacto {
+  gap: 2px;
+}
 
 .i1:hover {
-    transform: scale(1.75) translate(50px, 50px);
+  transform: scale(1.75) translate(50px, 50px);
 }
 
 .i2:hover {
-    transform: scale(1.75) translate(-50px, 50px);
+  transform: scale(1.75) translate(-50px, 50px);
 }
 
 .i3:hover {
-    transform: scale(1.75) translate(50px, -50px);
+  transform: scale(1.75) translate(50px, -50px);
 }
 
 .i4:hover {
+  transform: scale(1.75) translate(-50px, -50px);
+}
+
+@media (min-width: 576px) {
+  .body {
+    border: 3px solid red;
+    display: grid;
+    grid-template-areas:
+      "header main"
+      "header main"
+      "header main"
+      "footer footer";
+    grid-template-rows: 10% 70% 10% 10%;
+    grid-template-columns: 15% 85%;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .menu_movil {
+    display: none;
+  }
+
+  .logo {
+    flex-basis: content;
+  }
+
+  .nombre {
+    flex-basis: content;
+    text-align: center;
+  }
+
+  .menu_text {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2em;
+    color: white;
+    flex-direction: column;
+  }
+
+  .imagen {
+    filter: grayscale(100%);
+  }
+  .i1:hover {
+    /* transform: scale(1.75) translate(50px, 50px); */
+    filter: grayscale(0%);
+    z-index: 1;
+  }
+
+  .i2:hover {
+    transform: scale(1.75) translate(-50px, 50px);
+    filter: grayscale(0%);
+    z-index: 1;
+  }
+
+  .i3:hover {
+    transform: scale(1.75) translate(50px, -50px);
+    filter: grayscale(0%);
+    z-index: 1;
+  }
+
+  .i4:hover {
     transform: scale(1.75) translate(-50px, -50px);
+    filter: grayscale(0%);
+    z-index: 1;
+  }
 }
