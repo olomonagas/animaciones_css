@@ -13,7 +13,7 @@
   </head>
   <body class="body">
     <header class="header">
-      <div class="logo">
+      <div id="Inicio" class="logo">
         <i class="fa-regular fa-image fa-2x"></i>
       </div> 
       <div class="nombre">Mis Imagenes</div>
@@ -21,13 +21,22 @@
         <i class="fa-solid fa-bars fa-1.5x"></i>
       </div>
       <div class="menu_text">
-        <span>Inicio</span>
-        <span>Galeria</span>
-        <span>Contacto</span>
+        <a href="#inicio">Inicio</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contacto">Contacto</a>
       </div>
     </header>
-    <main class="main">
-      <div class="galeria">
+    <section class="section"> En esta galeria,
+      <div class="texto">
+        <span>
+          se muestran imágenes tomadas por mí en diferentes lugares del mundo,
+          incluyendo la del fondo de esta sección.
+          Al clikear sobre cada una de ellas, se aplicarán animaciones que las van a resaltar.
+        </span>
+      </div>
+    </section>
+    <main class="main">Galeria de Imágenes
+      <div id="galeria" class="galeria">
         <div class="imagen i1">
             <span>Bahía de Cata. Venezuela</span>
         </div>
@@ -53,7 +62,7 @@
         <i class="fa-brands fa-twitter"></i>
         </span>
       </div>
-      <div class="contacto">
+      <div id="contacto" class="contacto">
         <label class="correo">Correo:</label>
         <input type="email" id="correo" placeholder="Ingrese su correo" />
       </div>
